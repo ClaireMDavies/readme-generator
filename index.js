@@ -1,23 +1,6 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
-
-
-inquirer
-  .prompt([
-
-    /* Pass your questions in here */
-  ])
-  .then(answers => {
-    // Use user feedback for... whatever!!
-  })
-  .catch(error => {
-    if(error.isTtyError) {
-      // Prompt couldn't be rendered in the current environment
-    } else {
-      // Something else when wrong
-    }
-  });
-
+const fs = require('fs');
 
 // An array of questions for user input
 const questions = [
@@ -50,7 +33,7 @@ const questions = [
         name: "license",
         type: "checkbox",
         message: "What license is used for this project?",
-        choices: ["MIT", ""]
+        choices: ["MIT", "Apache license 2.0", "Microsoft Public License"]
     },
     {
         name: "contributing",
@@ -60,18 +43,34 @@ const questions = [
     {
         name: "tests",
         type: "input",
-        message: "What is the title of your project?",
+        message: "Write any tests you have for your app here",
     },
     {
         name: "questions",
         type: "input",
-        message: "Write any tests you have for your app here",
+        message: "What is your email address?",
     },
 
 ];
 
+   
+    
+    inquirer.prompt(questions).then(answers => {
+  })
+  .catch(error => {
+    if(error.isTtyError) {
+      // Prompt couldn't be rendered in the current environment
+    } else {
+      // Something else when wrong
+    }
+  });
+
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, answers) {
+    //fs.writeFile('./output/README.md', output, function (err) {
+        //if (err) return console.log(err);
+      //});    
+}
 
 // TODO: Create a function to initialize app
 function init() {}
