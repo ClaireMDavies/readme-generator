@@ -13,18 +13,18 @@ function renderLicenseBadge(answers) {
 function renderLicenseLink(license) {
     if (license === "none") {
         return `- [Installation instructions](##Installation-instructions)
-                - [Usage Information](##Usage-Information)
-                - [Contributors](##Contributors)
-                - [Test Instructions](##Test-instructions)
-                - [Questions](##Questions)`
+- [Usage Information](##Usage-Information)
+- [Contributors](##Contributors)
+- [Test Instructions](##Test-instructions)
+- [Questions](##Questions)`
     }
     else {
         return `- [Installation instructions](##Installation-instructions)
-                - [Usage Information](##Usage-Information)
-                - [License](##License)
-                - [Contributors](##Contributors)
-                - [Test Instructions](##Test-instructions)
-                - [Questions](##Questions)`
+- [Usage Information](##Usage-Information)
+- [License](##License)
+- [Contributors](##Contributors)
+- [Test Instructions](##Test-instructions)
+- [Questions](##Questions)`
     }
 }
 
