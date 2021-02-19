@@ -2,8 +2,7 @@
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {}
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
+//function to create table of contents, with or without license link
 function renderLicenseLink(license) {
     if (license === "none") {
         return `- [Installation instructions](##Installation-instructions)
@@ -20,16 +19,21 @@ function renderLicenseLink(license) {
                 - [Test Instructions](##Test-instructions)
                 - [Questions](##Questions)`
     }
-
-
 }
 
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {}
+// function that returns the license section of README, when a license is chosen
+function renderLicenseSection(answers) {
+    if (answers.license === "none") {
+        return ``
+    }
+    else {
+        return `## License
+License with ${answers.license}`
+    }
+}
 
-// TODO: Create a function to generate markdown for README
+//function to generate markdown for README
 const generateMarkdown = (answers) => 
 `# ${answers.title}
 
@@ -43,8 +47,7 @@ ${answers.project_description}
 ${answers.usage}
 //if yes, need to look into including screenshot here
 
-## License
-${answers.license}
+${renderLicenseSection(answers)}
 
 ## Contributors
 The contributors to this project were [${answers.contributing}](github.com/${answers.contributing})

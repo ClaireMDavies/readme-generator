@@ -3,6 +3,7 @@
 ## Table of Contents
 - [Installation instructions](##Installation-instructions)
                 - [Usage Information](##Usage-Information)
+                - [License](##License)
                 - [Contributors](##Contributors)
                 - [Test Instructions](##Test-instructions)
                 - [Questions](##Questions)
@@ -15,7 +16,7 @@ undefined
 //if yes, need to look into including screenshot here
 
 ## License
-none
+License with MIT
 
 ## Contributors
 The contributors to this project were [undefined](github.com/undefined)
