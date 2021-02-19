@@ -1,6 +1,13 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {}
+function renderLicenseBadge(answers) {
+    if (answers.license === "none") {
+        return ``
+    }
+    else {
+        return `https://img.shields.io/github/license/${answers.contributing}/${answers.title}`
+    }
+}   
 
 //function to create table of contents, with or without license link
 function renderLicenseLink(license) {
@@ -35,13 +42,16 @@ License with ${answers.license}`
 
 //function to generate markdown for README
 const generateMarkdown = (answers) => 
-`# ${answers.title}
+`# ${answers.title} ${renderLicenseBadge(answers)}
+
+## Description
+${answers.project_description}
 
 ## Table of Contents
 ${renderLicenseLink(answers.license)}
   
 ## Installation instructions
-${answers.project_description}
+${answers.installation}
   
 ## Usage Information
 ${answers.usage}
