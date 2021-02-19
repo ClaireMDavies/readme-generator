@@ -60,12 +60,12 @@ ${answers.usage}
 ${renderLicenseSection(answers)}
 
 ## Contributors
-The contributors to this project were [${answers.contributing}](github.com/${answers.contributing})
+The contributors to this project were [${answers.contributing}](https://github.com/${answers.contributing})
 
 ## Test Instructions
 ${answers.tests}
 
 ## Questions
-If you have any questions about this application please direct them to [${answers.questions}](${answers.questions})`;
+If you have any questions about this application please contact me by [email](${answers.questions}), or at [Github](https://github.com/${answers.contributing}) `;
 
 module.exports = generateMarkdown;
