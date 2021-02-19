@@ -5,7 +5,7 @@ function renderLicenseBadge(answers) {
         return ``
     }
     else {
-        return `https://img.shields.io/github/license/${answers.contributing}/${answers.title}`
+        return `![Github license](https://img.shields.io/github/license/${answers.contributing}/${answers.title})`
     }
 }   
 
