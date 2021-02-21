@@ -27,25 +27,25 @@ const questions = [
         message: "How does a user use your application?",
     },
     {
-        name: "usage-screenshots",
-        type: "confirm",
-        message: "Do you have any screenshots you want to include?  If yes, please upload them into an assets file in your project",
-    },
-    {
         name: "license",
         type: "list",
         message: "What license is used for this project?",
-        choices: ["MIT", "Apache license 2.0", "GNU GPL v3", "none"]
+        choices: ["none", "MIT", "Apache license 2.0", "GNU GPL v3",  "GNU GPL v2", "GNU Affero GPL v3", "BSD 2-Clause", "BSD 3-clause", "Boost Software v1", "Mozilla Public License 2"]
     },
     {
-        name: "contributing_number",
+        name: "contributingNumber",
         type: "number",
         message: "How many contributors were there in the development of this project?",
     },
     {
         name: "contributing",
         type: "input",
-        message: "What are the Github profiles of the contributors to this project? \n If there are multiple contributors please separate the answers with a comma",
+        message: "Please provide the Github profile name of the owner of this repository",
+    },
+    {
+        name: "additionalContributors",
+        type: "input",
+        message: "if there was another contributor to this project please provide their github profile name",
     },
     {
         name: "tests",
