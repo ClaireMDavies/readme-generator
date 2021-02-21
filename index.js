@@ -3,6 +3,7 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown');
 
+const outputDirectory = './output/';
 
 // An array of questions for user input
 const questions = [
@@ -58,11 +59,9 @@ const questions = [
         message: "What is your email address?",
     }
 ];
-
-   
     
   
-// TODO: Create a function to write README file
+// function to write README file
 function writeToFile(fileName, answers) {
         const markdownTemplate = generateMarkdown(answers);
         fs.writeFile(fileName, markdownTemplate, function (err) {
@@ -71,12 +70,16 @@ function writeToFile(fileName, answers) {
       });    
 }
 
-// TODO: Create a function to initialize app
+// function to initialize app
 function init()
 {
     inquirer.prompt(questions).then((answers) => {
         try {
-            writeToFile('./utils/README.md', answers);
+            if (!fs.existsSync(outputDirectory)) {
+                fs.mkdirSync(outputDirectory);
+            }            
+
+            writeToFile(outputDirectory + 'README.md', answers);
         }
         catch(error) {
             console.log(error);

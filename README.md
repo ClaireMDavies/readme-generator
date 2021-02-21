@@ -4,20 +4,21 @@
 Creating an application that would allow a user to create a readme file from a selection of questions asked of them in the terminal, using node, and the inquirer npm
 
 ## Table of Contents
-- [Readme Generator  !Github license](#readme-generator--)
+  - [Readme Generator](#readme-generator--)
   - [Description](#description)
   - [Table of Contents](#table-of-contents)
   - [Installation](#installation)
   - [Usage](#usage)
   - [Credits](#credits)
   - [License](#license)
-  - [Badges](#badges)
   - [Contributors](#contributors)
   - [Future versions](#future-versions)
 
 ## Installation
+Initiate the app with node index.js
 
 ## Usage
+https://drive.google.com/file/d/1aGgN5gzi2xgX_Cn7JriGQvIduB1Mlidr/view
 
 ## Credits
 For the license badges credit needs to go to [Lukas-h](https://gist.github.com/lukas-h)
@@ -25,7 +26,6 @@ For the license badges credit needs to go to [Lukas-h](https://gist.github.com/l
 ## License
 License with MIT
 
-## Badges
 
 ## Contributors
 This app is the sole work of [Claire](https://github.com/ClaireMDavies)
